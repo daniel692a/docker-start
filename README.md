@@ -30,5 +30,14 @@ docker run -it image bash
    > Nos muestra las imágenes que están en nuestra computadora
 4. `docker run --name mycontainer -p 8000:80 myimage:v1.0`
     > Si requiere de un puerto para ver como servidor, se pone el parámetro -p y el puerto
+    > Variante `docker run --rm --name mycontainer -p 8000:80 myimage:v1.0`
 
 **Borrar imágenes**: `docker system prune -af`
+
+# Docker compose
+Docker Compose es una herramienta que permite simplificar el uso de Docker. A partir de archivos YAML es mas sencillo crear contendores, conectarlos, habilitar puertos, volumenes, etc. Con Compose puedes crear diferentes contenedores y al mismo tiempo, en cada contenedor, diferentes servicios, unirlos a un volúmen común, iniciarlos y apagarlos, etc. Es un componente fundamental para poder construir aplicaciones y microservicios.
+
+## Correr una aplicación con docker-compose
+1. Crear tantos Dockerfile sean necesarios y un `docker-compose.yaml`
+2. `docker-compose up --build` -> Hace build a la imagen y el run
+3. `docker-compose down` -> También elimina los contenedores
