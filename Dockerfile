@@ -1,0 +1,13 @@
+FROM python:3.8-slim-buster
+
+EXPOSE 8000
+
+ENV PYTHONDONTWRITEBYTECODE=1
+
+ENV PYTHONBUFFERED=1
+
+WORKDIR /app
+
+COPY . /app/
+
+CMD ["python", "app.py"]
