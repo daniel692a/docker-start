@@ -12,7 +12,7 @@ ENV FLASK_RUN_HOST=0.0.0.0
 
 WORKDIR /app
 
-RUN apk add --no-cache gcc musl-dev linux-headers
+# RUN apk add --no-cache gcc musl-dev linux-headers
 
 COPY requirements.txt requirements.txt
 
